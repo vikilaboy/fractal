@@ -44,7 +44,7 @@ class PhalconFrameworkPaginatorAdapter implements PaginatorInterface
      */
     public function getCurrentPage()
     {
-        return $this->paginator->current;
+        return $this->paginator->getCurrent();
     }
 
     /**
@@ -54,7 +54,7 @@ class PhalconFrameworkPaginatorAdapter implements PaginatorInterface
      */
     public function getLastPage()
     {
-        return $this->paginator->last;
+        return $this->paginator->getLast();
     }
 
     /**
@@ -64,7 +64,7 @@ class PhalconFrameworkPaginatorAdapter implements PaginatorInterface
      */
     public function getTotal()
     {
-        return $this->paginator->total_items;
+        return $this->paginator->getTotalItems();
     }
 
     /**
@@ -74,7 +74,7 @@ class PhalconFrameworkPaginatorAdapter implements PaginatorInterface
      */
     public function getCount()
     {
-        return $this->paginator->total_pages;
+        return $this->paginator->getTotalItems();
     }
 
     /**
@@ -86,7 +86,7 @@ class PhalconFrameworkPaginatorAdapter implements PaginatorInterface
     {
         // $this->paginator->items->count()
         // Because when we use raw sql have not this method
-        return count($this->paginator->items);
+        return count($this->paginator->getItems());
     }
 
     /**
@@ -96,7 +96,7 @@ class PhalconFrameworkPaginatorAdapter implements PaginatorInterface
      */
     public function getNext()
     {
-        return $this->paginator->next;
+        return $this->paginator->getNext();
     }
 
     /**
